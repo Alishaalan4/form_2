@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Job App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <form action="" id="jobapplicationform">
+    <div>
+        <label for="full_name">Full Name:</label>
+        <input type="text" id="full_name" name="full_name" required>
+    </div> 
+
+    <div>
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+    </div>
+
+    <div>
+        <label for="phone">Phone Number:</label>
+        <input type="tel" id="phone" name="phone" required pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}">
+    </div>
+
+    <div>
+        <label for="position">Position Applied For:</label>
+        <select id="position" name="position" required>
+            <option value="Software Engineer">Software Engineer</option>
+            <option value="Data Analyst">Data Analyst</option>
+            <option value="Project Manager">Project Manager</option>
+        </select>
+    </div>
+
+    <div>
+        <label for="salary">Desgired Salary:</label>
+        <input type="number" id="salary" name="salary" required>
+    </div>
+
+    <div>
+        <label for="resume">Upload Resume:</label>
+        <input type="file" id="resume" name="resume" required accept=".pdf,.doc,.docx">
+    </div>
+
+    <div>
+        <label for="cover_letter">Enter your Cover letter:</label>
+        <textarea name="cover_letter" id="cover_letter" rows="5" cols="18"></textarea>
+    </div>
+
+    <div class="radio-group">
+        <label>Gender</label>
+        <input type="radio" name="gender_male" id="gender_male" value="Male" required>
+        <label for="gender_male">Male</label>
+
+        <input type="radio" name="gender_female" id="gender_female" value="female" required>
+        <label for="gender_female">Female</label>
+    </div>
+
+    <div>
+        <label for="experience">Years Of Experience</label>
+        <input type="number" id="experience" name="experience" required min="1" max="12" step="1">
+    </div>
+
+    <div>
+        <label for="start_date">Available Start Date</label>
+        <input type="datetime-local" name="start_date" id="start_date">
+    </div>
+
+    <div>
+        <input type="hidden" name="form_id" id="form_id"  value="job_application_001">
+    </div>
+
+    <!-- put the dynamic data of location in it , it should be empty to let the data appear in it-->
+    <div id="demo"></div>
+    <button type="button" onclick="getlocation()">Get Location</button>
+
+
+    <div>
+        <button type="submit">Submit</button>
+    </div>
+    <div>
+        <button type="reset">Reset</button>
+    </div>
+
+
+    </form>
+
+<script src="script.js"></script>
+</body>
+</html>
